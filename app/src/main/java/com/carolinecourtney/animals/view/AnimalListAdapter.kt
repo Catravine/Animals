@@ -9,9 +9,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.carolinecourtney.animals.R
 import com.carolinecourtney.animals.databinding.ItemAnimalBinding
 import com.carolinecourtney.animals.model.Animal
-import com.carolinecourtney.animals.util.getProgressDrawable
-import com.carolinecourtney.animals.util.loadImage
-import kotlinx.android.synthetic.main.item_animal.view.*
 
 class AnimalListAdapter(private val animalList: ArrayList<Animal>):
     RecyclerView.Adapter<AnimalListAdapter.AnimalViewHolder>(), AnimalClickListener {

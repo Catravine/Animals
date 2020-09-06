@@ -30,8 +30,7 @@ data class Animal(
         parcel.readString(),
         parcel.readString(),
         parcel.readString()
-    ) {
-    }
+    )
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeString(name)
@@ -67,8 +66,7 @@ data class Taxonomy(
         parcel.readString(),
         parcel.readString(),
         parcel.readString()
-    ) {
-    }
+    )
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeString(kingdom)
@@ -98,8 +96,7 @@ data class Speed(
     constructor(parcel: Parcel) : this(
         parcel.readString(),
         parcel.readString()
-    ) {
-    }
+    )
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeString(metric)

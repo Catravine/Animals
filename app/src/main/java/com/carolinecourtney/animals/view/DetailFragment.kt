@@ -16,8 +16,6 @@ import com.carolinecourtney.animals.R
 import com.carolinecourtney.animals.databinding.FragmentDetailBinding
 import com.carolinecourtney.animals.model.Animal
 import com.carolinecourtney.animals.model.AnimalPalette
-import com.carolinecourtney.animals.util.getProgressDrawable
-import com.carolinecourtney.animals.util.loadImage
 
 class DetailFragment : Fragment() {
 
@@ -53,7 +51,7 @@ class DetailFragment : Fragment() {
                 override fun onLoadCleared(placeholder: Drawable?) { }
 
                 override fun onResourceReady(resource: Bitmap, transition: Transition<in Bitmap>?) {
-                    Palette.from(resource).generate() { palette ->
+                    Palette.from(resource).generate { palette ->
                         val intColor = palette?.lightMutedSwatch?.rgb ?: 0
                         dataBinding.palette =  AnimalPalette(intColor)
                     }

@@ -33,9 +33,9 @@ class ListViewModelTest {
     @Mock
     lateinit var prefs: SharedPreferencesHelper
 
-    val application = Mockito.mock(Application::class.java)
+    private val application = Mockito.mock(Application::class.java)
 
-    var listViewModel = ListViewModel(application, true)
+    private var listViewModel = ListViewModel(application, true)
 
     private val key = "Test Key"
 
@@ -127,7 +127,7 @@ class ListViewModelTest {
             }
         }
 
-        RxJavaPlugins.setInitNewThreadSchedulerHandler { scheduler -> immediate }
-        RxAndroidPlugins.setInitMainThreadSchedulerHandler { scheduler -> immediate }
+        RxJavaPlugins.setInitNewThreadSchedulerHandler { immediate }
+        RxAndroidPlugins.setInitMainThreadSchedulerHandler { immediate }
     }
 }
